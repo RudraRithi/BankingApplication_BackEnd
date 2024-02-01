@@ -76,7 +76,8 @@ public class CustomerController {
 		return service.withdraw(acno, amount);
 		
 	}
-	
+
+	@getMapping("account/viewtransaction/{acno}"})
 	public ResponseStructure<List<BankTransaction>> viewtransaction(@PathVariable long acno) throws MyException{
 		return service.viewtransaction(acno);
 		
